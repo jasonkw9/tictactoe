@@ -8,7 +8,7 @@ export const XPlayer: React.FC<SVGProps> = ({
   isClick,
 }) => (
   <svg
-    className={`ticktactoe-svg trasition duration-200 ease-in lg:w-[120px] w-[80px] ${
+    className={`ticktactoe-svg trasition duration-200 ease-in ${
       disableHoverEffect ? null : "hover:scale-[1.3] "
     } ${isClick === true ? "scale-[1.3]" : null}`}
     width={width ? width : 60}

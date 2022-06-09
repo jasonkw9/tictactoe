@@ -38,7 +38,7 @@ export const PlayerSelection = ({
             setIsOClick(false);
           }}
         >
-          <XPlayer isClick={isXClick} width={120} height={120} />
+          <XPlayer isClick={isXClick} width={100} height={100} />
         </button>
         <button
           className="px-2"
@@ -48,7 +48,7 @@ export const PlayerSelection = ({
             setIsXClick(false);
           }}
         >
-          <OPlayer isClick={isOClick} width={120} height={120} />
+          <OPlayer isClick={isOClick} width={100} height={100} />
         </button>
       </div>
       <p className="text-white lg:py-10 py-5">
