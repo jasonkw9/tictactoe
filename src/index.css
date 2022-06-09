@@ -1,13 +1,40 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+      "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+      "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer utilities {
+  .tictactoe {
+    @apply flex flex-col items-center justify-center;
+  }
+
+  .tictactoe-row {
+    @apply flex items-center justify-center mt-[10px];
+  }
+
+  .btn-tictactoe {
+    @apply h-[90px] w-[90px] md:h-[100px] md:w-[100px] rounded-3xl items-center shadow-xl transition duration-200 ease-in bg-[#009788] hover:bg-[#249f9c] mx-[5px];
+  }
+
+  .ticktactoe-svg {
+    @apply m-auto;
+  }
+
+  .btnRestartGame {
+    @apply border border-[#18cfc9] bg-[#18cfc9] text-black rounded-md px-4 py-2 m-2 transition duration-500 ease-in select-none hover:bg-[#037a76] focus:outline-none;
+  }
+
+  .btnQuitGame {
+    @apply border border-[#F31779] bg-[#F31779] text-white rounded-md px-4 py-2 m-2 transition duration-500 ease-in select-none hover:bg-[#f44786] focus:outline-none;
+  }
 }
